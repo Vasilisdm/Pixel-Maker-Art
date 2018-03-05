@@ -20,7 +20,5 @@ inputWeight.addEventListener('change', function(event){
 
 function makeGrid() {
 
-    height = document.getElementById('#inputHeight').value;
-    console.log(height);
 
 }
