@@ -25,9 +25,16 @@ function makeGrid(width, height) {
         for (let column = 1; column <= width; column++) {
             const td = document.createElement('td');
 
+            td.addEventListener('click',function(){
+                td.style.backgroundColor = colorPicker.value;
+            });
+
             tr.appendChild(td);
         }
         
         pixelCanvas.appendChild(tr);
     }
+
+    
 }
+
