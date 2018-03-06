@@ -1,29 +1,21 @@
 // Select color input
-let colorInput = document.querySelector('#colorPicker');
-
-colorInput.addEventListener('change', function(event){
-    color = event.target.value;
-    console.log(color);
-});
-
 // Select size input
-let heightInput = document.querySelector('#inputHeight');
+const form  = document.querySelector('#sizePicker'),
+    height  = form.querySelector('#inputHeight'),
+    width   = form.querySelector('#inputWeight'),
+    submit  = form.querySelector('.submit')
 
-heightInput.addEventListener('change',function(event){
-    height = event.target.value;
-    console.log(height);
-});
-
-let inputWeight = document.querySelector('#inputWeight');
-
-inputWeight.addEventListener('change', function(event){
-    width = event.target.value;
-    console.log(width);
-});
+const colorPicker  = document.querySelector('#colorPicker'),
+    pixelCanvas     = document.querySelector('#pixelCanvas')
 
 // When size is submitted by the user, call makeGrid()
+submit.addEventListener('click', function(sub){
+    sub.preventDefault();
+    if (sub.target.nodeName === 'INPUT') {
+        makeGrid(height.value, width.value);
+    }
+});
 
-function makeGrid() {
-
-
+function makeGrid(height, width) {
+    
 }
