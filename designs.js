@@ -12,10 +12,22 @@ const colorPicker  = document.querySelector('#colorPicker'),
 submit.addEventListener('click', function(sub){
     sub.preventDefault();
     if (sub.target.nodeName === 'INPUT') {
-        makeGrid(height.value, width.value);
+        makeGrid(width.value, height.value);
     }
 });
 
-function makeGrid(height, width) {
-    
+function makeGrid(width, height) {
+    for (let row = 1; row <= height; row++) {
+
+        // creating table row
+        const tr = document.createElement('tr');
+
+        for (let column = 1; column <= width; column++) {
+            const td = document.createElement('td');
+
+            tr.appendChild(td);
+        }
+        
+        pixelCanvas.appendChild(tr);
+    }
 }
